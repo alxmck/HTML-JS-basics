@@ -1,0 +1,28 @@
+
+.klassenstyle_external {
+    color: red;
+}
+
+.wrapper_div {
+    font-family: verdana;
+}
+
+.inhalt_div {
+    font-size: 2em;
+}
+
+.inhalt_div.zusatz_klasse {
+    text-decoration: line-through;
+}
+
+#inhalt_1 {
+    color: blue;
+}
+
+#inhalt_2 {
+    color: red;
+}
+
+#inhalt_2 span {
+    text-decoration: underline;
+}

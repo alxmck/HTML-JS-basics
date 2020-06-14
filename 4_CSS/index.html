@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>Seitentitel</title>
+        <meta charset="UTF-8">
+        
+        <style>
+            
+            .klassenstyle_internal {
+                color: blue;
+                font-family: verdana;
+            }
+            
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        
+    </head>
+    <body>
+        
+        <h1>CSS - Cascading Style Sheets</h1>
+        
+        <h2>Einbinden</h2>
+        
+        <p>Text ohne Styling-Attribut</p>
+        
+        <p style="font-size: 1.1em; font-family: arial;">Text mit Styling-Attribut (Inline / im Attribut)</p>
+        
+        <p class="klassenstyle_internal">Styling über eine Klasse (Internal CSS / im Header)</p>
+        
+        <p class="klassenstyle_external">Styling über eine Klasse (External CSS / externe .css-Datei)</p>
+        
+        <h2>Zugriff / Verhalten</h2>
+        
+        <div class="wrapper_div">
+            
+            <p>Text im Wrapper div</p>
+            
+            <div class="inhalt_div">
+                
+                <p>Text im Inhalt div</p>
+                
+                <div id="inhalt_1">
+                    
+                    <p>Text in inhalt_1</p>
+                    
+                    <div id="inhalt_2">
+                        <p>Text in <span>inhalt_2</span></p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="inhalt_div zusatz_klasse">
+                
+                <p>Text im Inhalt div. Hier jedoch mehrere Klassen.</p>
+                
+            </div>
+            
+        </div>
+        
+        <div style="background-color: blue; padding: 10px;">
+            
+            <div style="background-color: red; margin: 20px; padding: 20px;">
+                Hallo!
+            </div>
+            
+        </div>
+        
+        <div style="overflow: hidden; background-color: blue; margin-top: 20px;">
+            
+            <div style="float: left; background-color: red; width: 50px; height: 50px;">
+                Text
+            </div>
+            
+        </div>
+        
+        <div style="overflow: hidden; background-color: blue; margin-top: 20px;">
+            
+            <div style="float: right; background-color: red; width: 50px; height: 50px;">
+                Text
+            </div>
+            
+        </div>
+        
+        <div style="overflow: hidden; background-color: blue; margin-top: 20px;">
+            
+            <div style="margin: 0 auto; background-color: red; width: 50px; height: 50px;">
+                Text
+            </div>
+            
+        </div>
+        
+        
+        <div style="border: 1px solid black; margin-top: 10px;">
+            
+            Mit Rand
+            
+        </div>
+        
+    </body>
+</html>

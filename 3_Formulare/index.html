@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>Basis Formularelemente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Formulare</h1>
+        
+        <form action="./index.html" method="POST">
+        <!-- <form action="" method="GET"> -->
+        
+            <p>
+            <label for="user_name">Name: </label>
+            <input type="text" name="user_name" id="user_name" placeholder="Dein Name" />
+            </p>
+
+            <p>
+            <label for="user_pw">Passwort: </label>
+            <input type="password" name="user_pw" id="user_pw" />
+            </p>
+
+            <p>
+            <span>Versteckt </span>
+            <input type="hidden" name="hidden_values" id="hidden_values" value="123"/>
+            </p>
+            
+            <p>
+            <label for="langer_text">Langer Text: </label>
+            <textarea name="langer_text" id="langer_text" placeholder="Hier bitte einen langen Text rein!"></textarea>
+            </p>
+            
+            <p>
+            <label for="auswahl_select">Select: </label>
+            <select name="auswahl_select" id="auswahl_select">
+                <option value="1">Wert 1</option>
+                <option value="2">Wert 2</option>
+                <option value="3" selected="selected">Wert 3</option>
+                <option value="4">Wert 4</option>
+            </select>
+            </p>
+            
+            <p>
+            <span>Checkbox</span>
+            <input type="checkbox" name="user_checkbox_1" id="user_checkbox_1" value="Wert 1"><label for="user_checkbox_1">Wert 1</label>
+            <input type="checkbox" name="user_checkbox_2" id="user_checkbox_2" value="Wert 2"><label for="user_checkbox_2">Wert 2</label>
+            <input type="checkbox" name="user_checkbox_3" id="user_checkbox_3" value="Wert 3"><label for="user_checkbox_3">Wert 3</label>
+            </p>
+            
+            <p>
+            <span>Radio</span>
+            <input type="radio" name="user_radio" id="user_radio_1" value="Wert 1"><label for="user_radio_1">Wert 1</label>
+            <input type="radio" name="user_radio" id="user_radio_2" value="Wert 2"><label for="user_radio_2">Wert 2</label>
+            <input type="radio" name="user_radio" id="user_radio_3" value="Wert 3"><label for="user_radio_3">Wert 3</label>
+            </p>
+            
+            <p>
+            <input type="submit" value="Abschicken" />
+            </p>
+            
+            <p>
+            <input type="reset" value="Zurücksetzen" />
+            </p>
+
+            <p>
+                <button name="ein_button">Etwas anderes</button>
+            </p>
+            
+        </form>
+        
+    </body>
+</html>
