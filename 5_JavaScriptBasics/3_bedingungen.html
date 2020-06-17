@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Bedingungen</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Bedingungen</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+            
+        let iAlter = 28;
+        
+        if (iAlter <= 10) {
+            console.log("Alter ist kleiner gleich 10");
+        } else if (iAlter >= 90) {
+            console.log("Alter ist groesser gleich 90");
+        } else {
+            console.log("Alter liegt zwischen 11 und 89 (inklusiv)");
+        }
+        
+        if (iAlter > 10 && 
+                 iAlter < 90 && 
+                 iAlter == 28) {
+             console.log("Alter ist groesser 10 und kleiner 90 und genau 28");
+        }
+        
+        if (iAlter > 10) {
+            if (iAlter < 90) {
+                if (iAlter == 28) {
+                    console.log("Alter ist groesser 10 und kleiner 90 und genau 28");
+                }
+            }
+        }
+        
+        if (1 == true) {
+            console.log("1 entspricht true");
+        }
+        
+        if (1 === true) {
+            console.log("1 entspricht true inkl. Typprüfung");
+        } else {
+            console.log("1 und true sind gleich, aber nicht ganz gleich :]");
+        }
+            
+        </script>
+        
+    </body>
+</html>

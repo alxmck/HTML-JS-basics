@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Funktionen</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Funktionen</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+            
+        function makeNiceAlert() {
+            alert("Hallo! Schön dich zu sehen!");
+        }
+    
+        function makeNiceAlertWithName(sName) {
+            alert("Hallo " + sName + "! Schön dich zu sehen!");
+        }
+    
+        function makeSomethingElse(sMitDefault = "A") {
+            console.log("Der Wert der Variable ist: " + sMitDefault);
+        }
+    
+        makeNiceAlert();
+        makeNiceAlertWithName("Renate");
+        makeNiceAlert();
+        makeNiceAlertWithName("Hannes");
+        makeSomethingElse();
+        makeSomethingElse("B");
+    
+            
+        </script>
+        
+    </body>
+</html>

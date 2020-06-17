@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Lamdbas</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Lamdbas</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+        
+            // Funktion in Variable speichern
+        
+            let oDoIt = function() {
+                console.log("ok.. jetzt wirds wilder :]");
+            }
+    
+            oDoIt();
+            
+            // Methode in Objekt implementieren
+            
+            let oSomeObj = {
+                name: "Maxens Mustermannens",
+                printName: function () {
+                    console.log("Mein Name ist " + this.name);
+                }
+                
+            }
+            
+            oSomeObj.printName();
+            
+            // Anonyme Funktionen / Lambdas 
+            // = Funktionen ohne Namen 
+            
+            let oDoItAgain = function () {
+                let sEndResult = function () {
+                    return function () {
+                        return function () {
+                            return "Es wird noch wilder - versprochen :-)";
+                        }();
+                    }();
+                }();
+                console.log("Das Ergebnis von der Funktion in der Funktion in der Funktion ist: " + sEndResult + " (ausgegeben innerhalb der Funktion, die oDoItAgain zugewiesen wurde :-))");  
+            };
+            
+            oDoItAgain();
+            
+            
+        </script>
+        
+    </body>
+</html>

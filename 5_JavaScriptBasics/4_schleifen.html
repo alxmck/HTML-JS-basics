@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Schleifen</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Schleifen</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+        
+        for(let ii = 0; ii < 5; ii++) {
+            console.log("For-Schleife ii: " + ii);
+        }
+        
+        let bBedingung = true;
+        let iZaehler = 0;
+        
+        while(bBedingung == true) {
+            
+            iZaehler++;
+            
+            if (iZaehler == 3) {
+                continue;
+            }
+            
+            console.log("While Zaehler: " + iZaehler);
+            
+            if (iZaehler == 5) {
+                break;
+            }
+            
+        }
+        
+        do {
+            console.log("Do while.. wird immer mindestens einmal ausgefuhert");
+        } while (10 == 9);
+        
+        
+        </script>
+            
+    </body>
+</html>

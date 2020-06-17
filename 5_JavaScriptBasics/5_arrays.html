@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Arrays</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Arrays</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+        
+        // Eindimensionales Array
+        let aAlter = [10,15,20];
+        console.log("Alter, Index 1: " + aAlter[1]);
+        
+        // Mehrdimensionales Array
+        let aBuchstaben = [["a","b","c"],["d","e","f"],["g","h","i"]];
+        console.log("Buchstaben, erstes Element von zweitem Array: " + aBuchstaben[1][0]);
+        
+        // Die Mischung machts
+        let aWildesJavaScript = [true,1,"Hallo - ","Warum","darf","man","sowas","?"];
+        console.log("WildesJavaScript, Index 0: " + aWildesJavaScript[0]);
+        console.log("WildesJavaScript, Index 1: " + aWildesJavaScript[1]);
+        console.log("WildesJavaScript, Index 2: " + aWildesJavaScript[2]);
+    
+        // Komplettes Array ausgeben
+        for(let ii = 0; ii < aWildesJavaScript.length; ii++) {
+            console.log("WildesJS, key " + ii + ": " + aWildesJavaScript[ii]);
+        }
+    
+    
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: JQuery</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>JQuery</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <div class="roter_text" id="roter_text_1" style="color: red;">Erster roter Text</div>
+        <div class="roter_text" id="roter_text_2" style="color: red;">Zweiter roter Text</div>
+        <div id="gruener_text" style="color: green;">Grüner Text</div>
+        
+        
+        <!-- jQuery Lib einbinden -->
+        <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+        <!-- Elemente auswaehlen und veraendern -->
+        <script language="javascript" type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                alert("ok.. noch ist alles ruhig");
+                
+                $(".roter_text").css("color", "blue");
+                $(".roter_text").html("jetzt ist die farbe blau");
+                
+                $("#gruener_text").css("color", "blue");
+                $("#gruener_text").html("hier ebenfalls");
+                
+                // es ist auch moeglich ueber elemente zu iterieren
+                $(".roter_text").each(function() {
+                    
+                    console.log("die aktuelle id ist: " + $(this).attr("id"));
+                    
+                    if ($(this).attr("id") == "roter_text_2") {
+                    
+                        // wenn es das zweite element ist, dann soll der text erweitert werden
+                        $(this).html($(this).html() + " - das zweite Element");
+            
+                    }
+                    
+                })
+                
+            });
+            
+        </script>
+        
+        
+    </body>
+</html>

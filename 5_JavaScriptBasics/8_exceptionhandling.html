@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: Fehlerbehandlung / Exception Handling</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>Fehlerbehandlung / Exception Handling</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <script language="javascript" type="text/javascript">
+        
+        try {
+            
+            let iUserEingabe = prompt("Bitte 10 eingeben!");
+            
+            if (iUserEingabe != 10) {
+                throw new Error("Nur die Zahl 10 erlaubt!")
+            }
+            
+            console.log("Eingabe " + iUserEingabe);
+            
+        } catch (sError) {
+            console.log(sError);
+        }
+    
+            
+        </script>
+        
+        
+    </body>
+</html>

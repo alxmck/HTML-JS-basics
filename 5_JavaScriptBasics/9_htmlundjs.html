@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+ Written by Alexander Mack (github.com/alxmck). Have fun using the code where ever you want.
+-->
+<html>
+    <head>
+        <title>JavaScript: JavaScript und HTML</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <h1>JavaScript und HTML</h1>
+        
+        <a href="./index.html">Zurück</a>
+        
+        <div class="text_a">Das ist der erste Text</div>
+        <div id="text_b_123">Das ist der zweite Text</div>
+        
+        <script language="javascript" type="text/javascript">
+        
+            // warten bis user bestaetigt
+            alert("OK");
+            
+            // dann zugriff auf die HTML Elemente
+            let oTextElement = document.getElementById('text_b_123');
+            if (oTextElement !== null) {
+                oTextElement.innerHTML = ".. der Text lässt sich natürlich ändern..";
+            }
+            
+            let aTextElements = document.getElementsByClassName('text_a');
+            for (let ii = 0; ii < aTextElements.length; ii++) {
+              aTextElements[ii].innerHTML = "Wäre doch gelacht.. ";
+            } 
+            
+    
+        </script>
+        
+        
+    </body>
+</html>
