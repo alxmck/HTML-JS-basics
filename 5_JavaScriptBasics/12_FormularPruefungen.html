@@ -13,6 +13,21 @@
         
         <a href="./index.html">Zurück</a>
         
+        <div id="form_wrapper">
+            <form action="./" method="GET">
+
+                <div>
+                    <label for="email">Ihre E-Mail</label>
+                    <input type="text" name="email" id="email" placeholder="E-Mail" /> <span id="status">-</span>
+                </div>
+
+                <div>
+                    <input type="submit" id="submit_btn" value="Abschicken"/>
+                </div>
+
+            </form> 
+        </div>
+        
         <!-- jQuery Lib einbinden -->
         <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
@@ -21,7 +36,59 @@
             
             $(document).ready(function() {
                 
+                // events:
+                // keydown, keyup, keypress, mousedown, mouseenter, mouseleave, mousemove... 
+                // Vgl. https://api.jquery.com/category/events/
                 
+                $("body").on("keyup", "#email", function() {
+                    
+                    let sInput = $("#email").val();
+                    
+                    if (sInput == "") {
+                        $("#status").html("-");
+                        $("#status").css("color", "black");
+                    } else if (! sInput.includes("@")) {
+                        $("#status").html("Ungültige E-Mail! @ Fehlt.");
+                        $("#status").css("color", "red");
+                    } else if (! sInput.includes(".")) {
+                        $("#status").html("Ungültige E-Mail! . Fehlt.");
+                        $("#status").css("color", "red");
+                    } else {
+                        $("#status").html("OK");
+                        $("#status").css("color", "green");
+                    }
+                    
+                });
+                
+                $("body").on("click", "#submit_btn", function(e) {
+                    
+                    // standard aktion verhindern (= abschicken des formulars)
+                    e.preventDefault();
+                    
+                    // Formular via Ajax 
+                    // https://api.jquery.com/jquery.ajax/
+                    
+                    let aData = { email: $("#email").val() };
+                    
+                    $.ajax({
+                        url: "12_Result.html",
+                        data: aData,
+                        method: "POST"
+                    }).done(function(sResponse) {
+                        
+                        // Formulardaten laden / ersetzen
+                    
+                        $("#status").html("-");
+                        $("#status").css("color", "black");
+                        $("#email").val("");
+                        
+                        $("#form_wrapper").html(sResponse);
+                        
+                    });
+                    
+                    return false;
+                    
+                });
                 
             });
             
